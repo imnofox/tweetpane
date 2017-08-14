@@ -3,7 +3,7 @@ $(document).ready(function() {
     $('.tweetpane').remove();
     var $frame = $('<iframe>');
     $frame.addClass('tweetpane');
-    $frame.attr('src', "https://twitter.com/i/notifications/?tweetpane=1");
+    $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
 
     $('.dashboard-right').prepend($frame);
   }
