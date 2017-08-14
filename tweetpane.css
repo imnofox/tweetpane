@@ -1,0 +1,51 @@
+.tweetpane {
+  width: 100%;
+  height: 550px;
+}
+
+body.NotificationsPage #timeline {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+body.NotificationsPage .AppContent {
+  width: 100%;
+  padding: 0;
+}
+
+body.NotificationsPage .ActivityItem {
+  padding: 10px 12px 10px 32px;
+}
+
+body.NotificationsPage .ProfileTweet-action {
+  min-width: 50px;
+}
+
+body.NotificationsPage .ProfileHeading {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 5;
+}
+
+body.NotificationsPage .stream-container {
+  padding-top: 45px;
+}
+
+body.NotificationsPage .stream-end {
+  margin-bottom: 0;
+}
+
+body.NotificationsPage .content-header {
+  border: 0px;
+}
+
+body.NotificationsPage .NotificationsSettingsButton,
+body.NotificationsPage .topbar,
+body.NotificationsPage .dashboard,
+body.NotificationsPage #profile-hover-container[style] {
+  display: none !important;
+}
