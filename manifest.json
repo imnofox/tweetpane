@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "TweetPane",
-  "version": "1.1.1",
+  "version": "1.1.2",
 
   "description": "Shows a notification panel on the right sidebar of your Twitter homepage",
 
@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://twitter.com/", "*://twitter.com/i/notifications?tweetpane=1"],
+      "matches": ["*://twitter.com/*", "*://twitter.com/i/notifications?tweetpane=1"],
       "js": ["vendor/jquery-3.2.1.min.js", "tweetpane.js"],
       "css": ["tweetpane.css"],
       "all_frames": true

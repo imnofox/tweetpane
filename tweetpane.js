@@ -1,11 +1,6 @@
 $(document).ready(function() {
   if ($('li.home.active').length > 0) {
-    $('.tweetpane').remove();
-    var $frame = $('<iframe>');
-    $frame.addClass('tweetpane');
-    $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
-
-    $('.dashboard-right').prepend($frame);
+    addFrameWhenReady();
   }
 
   if (document.URL.indexOf("?tweetpane=1") > 0) {
@@ -25,4 +20,26 @@ $(document).ready(function() {
       newTab.location;
     });
   }
+
+  $('body').on('click', '#global-nav-home a.js-nav', function() {
+    addFrameWhenReady();
+  });
 });
+
+function addFrameWhenReady() {
+  if ($('.dashboard-right').length > 0) {
+    $('.tweetpane').remove();
+    var $frame = $('<iframe>');
+    $frame.addClass('tweetpane');
+    $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
+
+    $('.dashboard-right').prepend($frame);
+    console.log("Placed frame.");
+    return;
+  }
+  else {
+    setTimeout(function() {
+        addFrameWhenReady();
+    }, 500);
+  }
+}
