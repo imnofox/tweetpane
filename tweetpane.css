@@ -3,127 +3,131 @@
   height: 550px;
 }
 
-body.NotificationsPage #timeline {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
+@-moz-document url(https://twitter.com/i/notifications?tweetpane=1) {
 
-body.NotificationsPage .AppContent {
-  width: 100%;
-  padding: 0;
-}
-
-body.NotificationsPage .ActivityItem {
-  padding: 10px 12px 10px 32px;
-}
-
-body.NotificationsPage .ProfileTweet-action {
-  min-width: 50px;
-}
-
-body.NotificationsPage .ProfileHeading {
-  position: fixed;
-  width: 100%;
-  background-color: #fff;
-  z-index: 5;
-}
-
-body.NotificationsPage .stream-container {
-  padding-top: 45px;
-}
-
-body.NotificationsPage .stream-end {
-  margin-bottom: 0;
-}
-
-body.NotificationsPage .content-header {
-  border: 0px;
-}
-
-body.NotificationsPage #dm_dialog .modal,
-body.NotificationsPage #retweet-tweet-dialog .modal[style],
-body.NotificationsPage #global-tweet-dialog .modal[style] {
-  width: 290px;
-  left: 0px !important;
-  top: 0px !important;
-  overflow-y: hidden;
-  margin-bottom: 0;
-}
-
-body.NotificationsPage .modal-content {
-  height: 550px;
-  border-radius: 0px;
-}
-
-body.NotificationsPage .modal-tweet-form-container {
-  position: absolute;
-  bottom: 0;
-}
-
-body.NotificationsPage #dm_dialog-header,
-body.NotificationsPage #retweet-tweet-dialog-header {
-  visibility: hidden;
-}
-
-body.NotificationsPage #retweet-tweet-dialog-header::after {
-    content: 'Retweet this?';
-    visibility: visible;
-    display: block;
+  body.NotificationsPage #timeline {
     position: absolute;
-    font-size: 18px;
-    top: 15px;
-    left: 15px;
-}
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
 
-body.NotificationsPage #tweet-box-global,
-body.NotificationsPage #retweet-with-comment {
-  max-height: 64px;
-  overflow-y: auto;
-}
+  body.NotificationsPage .AppContent {
+    width: 100%;
+    padding: 0;
+  }
 
-body.NotificationsPage #global-tweet-dialog .TweetBoxToolbar,
-body.NotificationsPage .DMInboxItem-title .username,
-body.NotificationsPage .DMDialog,
-body.NotificationsPage .DMComposer {
-  display: block;
-}
+  body.NotificationsPage .ActivityItem {
+    padding: 10px 12px 10px 32px;
+  }
 
-body.NotificationsPage .DMActivity {
-  width: 290px;
-  height: 550px;
-  min-width: 290px;
-  border-radius: 0px;
-}
+  body.NotificationsPage .ProfileTweet-action {
+    min-width: 50px;
+  }
 
-body.NotificationsPage .DMComposer-container {
-  width: 270px;
-  margin-bottom: 10px;
-}
+  body.NotificationsPage .ProfileHeading {
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    z-index: 5;
+  }
 
-body.NotificationsPage .DMComposer-send {
-  float: right;
-}
+  body.NotificationsPage .stream-container {
+    padding-top: 45px;
+  }
 
-body.NotificationsPage .TweetBoxExtras {
-  display: inline-block;
-}
+  body.NotificationsPage .stream-end {
+    margin-bottom: 0;
+  }
 
-body.NotificationsPage .DMTypeaheadSuggestions {
-  overflow-x: hidden;
-}
+  body.NotificationsPage .content-header {
+    border: 0px;
+  }
 
-body.NotificationsPage .DMActivity-toolbar > * + * {
-  margin-left: 10px;
-}
+  body.NotificationsPage #dm_dialog .modal,
+  body.NotificationsPage #retweet-tweet-dialog .modal[style],
+  body.NotificationsPage #global-tweet-dialog .modal[style] {
+    width: 290px;
+    left: 0px !important;
+    top: 0px !important;
+    overflow-y: hidden;
+    margin-bottom: 0;
+  }
 
-body.NotificationsPage .modal-overlay,
-body.NotificationsPage .NotificationsSettingsButton,
-body.NotificationsPage .topbar,
-body.NotificationsPage .dashboard,
-body.NotificationsPage #profile-hover-container[style],
-body.NotificationsPage .QuoteTweet-link {
-  display: none !important;
+  body.NotificationsPage .modal-content {
+    height: 550px;
+    border-radius: 0px;
+  }
+
+  body.NotificationsPage .modal-tweet-form-container {
+    position: absolute;
+    bottom: 0;
+  }
+
+  body.NotificationsPage #dm_dialog-header,
+  body.NotificationsPage #retweet-tweet-dialog-header {
+    visibility: hidden;
+  }
+
+  body.NotificationsPage #retweet-tweet-dialog-header::after {
+      content: 'Retweet this?';
+      visibility: visible;
+      display: block;
+      position: absolute;
+      font-size: 18px;
+      top: 15px;
+      left: 15px;
+  }
+
+  body.NotificationsPage #tweet-box-global,
+  body.NotificationsPage #retweet-with-comment {
+    max-height: 64px;
+    overflow-y: auto;
+  }
+
+  body.NotificationsPage #global-tweet-dialog .TweetBoxToolbar,
+  body.NotificationsPage .DMInboxItem-title .username,
+  body.NotificationsPage .DMDialog,
+  body.NotificationsPage .DMComposer {
+    display: block;
+  }
+
+  body.NotificationsPage .DMActivity {
+    width: 290px;
+    height: 550px;
+    min-width: 290px;
+    border-radius: 0px;
+  }
+
+  body.NotificationsPage .DMComposer-container {
+    width: 270px;
+    margin-bottom: 10px;
+  }
+
+  body.NotificationsPage .DMComposer-send {
+    float: right;
+  }
+
+  body.NotificationsPage .TweetBoxExtras {
+    display: inline-block;
+  }
+
+  body.NotificationsPage .DMTypeaheadSuggestions {
+    overflow-x: hidden;
+  }
+
+  body.NotificationsPage .DMActivity-toolbar > * + * {
+    margin-left: 10px;
+  }
+
+  body.NotificationsPage .modal-overlay,
+  body.NotificationsPage .NotificationsSettingsButton,
+  body.NotificationsPage .topbar,
+  body.NotificationsPage .dashboard,
+  body.NotificationsPage #profile-hover-container[style],
+  body.NotificationsPage .QuoteTweet-link {
+    display: none !important;
+  }
+
 }
