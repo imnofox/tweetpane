@@ -23,21 +23,31 @@ $(document).ready(function() {
     $('html').addClass('tweetpane-addon');
   }
 
-  $('body').on('click', '#global-nav-home a.js-nav', function() {
-    addFrameWhenReady();
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === "class") {
+        if ($(mutation.target).hasClass('active')) {
+          addFrameWhenReady();
+        }
+      }
+    });
+  });
+  observer.observe($('#global-nav-home')[0], {
+      attributes: true
   });
 });
 
 function addFrameWhenReady() {
   if ($('.dashboard-right').length > 0) {
-    $('.tweetpane').remove();
-    var $frame = $('<iframe>');
-    $frame.addClass('tweetpane');
-    $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
+    if ($('.tweetpane').length < 1) {
+      var $frame = $('<iframe>');
+      $frame.addClass('tweetpane');
+      $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
 
-    $('.dashboard-right').prepend($frame);
-    console.log("Placed frame.");
-    return;
+      $('.dashboard-right').prepend($frame);
+      console.log("Placed frame.");
+      return;
+    }
   }
   else {
     setTimeout(function() {
