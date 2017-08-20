@@ -13,7 +13,7 @@
 
   "content_scripts": [
     {
-      "matches": ["*://twitter.com/*", "*://twitter.com/i/notifications?tweetpane=1"],
+      "matches": ["*://twitter.com/*", "*://twitter.com/i/notifications?tweetpane=1", "*://twitter.com/mentions?tweetpane=1"],
       "js": ["vendor/jquery-3.2.1.min.js", "tweetpane.js"],
       "css": ["tweetpane.css"],
       "all_frames": true

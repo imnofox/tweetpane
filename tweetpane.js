@@ -19,6 +19,8 @@ $(document).ready(function() {
       var newTab = window.open(url, '_blank');
       newTab.location;
     });
+
+    $('html').addClass('tweetpane-addon');
   }
 
   $('body').on('click', '#global-nav-home a.js-nav', function() {
