@@ -1,6 +1,25 @@
-.tweetpane {
+.tweetpane,
+.tweetpane-container,
+.tweetpane-cover {
   width: 100%;
   height: 550px;
+}
+
+.tweetpane-container {
+  overflow-y: hidden;
+  margin-bottom: 10px;
+}
+
+.tweetpane-cover {
+  position: relative;
+  background-color: #fff;
+}
+
+.tweetpane-cover .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -16px 0 0 -16px;
 }
 
 .tweetpane-addon #timeline {

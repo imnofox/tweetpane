@@ -40,12 +40,23 @@ $(document).ready(function() {
 function addFrameWhenReady() {
   if ($('.dashboard-right').length > 0) {
     if ($('.tweetpane').length < 1) {
-      var $frame = $('<iframe>');
-      $frame.addClass('tweetpane');
-      $frame.attr('src', "https://twitter.com/i/notifications?tweetpane=1");
+      var $container = $('<div>', {class: 'tweetpane-container'});
+      var $cover = $('<div>', {class: 'tweetpane-cover'});
+      var $spinner = $('<span>', {class: 'spinner', title: 'Loading...'});
+      var $frame = $('<iframe>', {class: 'tweetpane', src: "https://twitter.com/i/notifications?tweetpane=1"});
 
-      $('.dashboard-right').prepend($frame);
-      console.log("Placed frame.");
+      $cover.append($spinner);
+      $container.append($cover);
+      $container.append($frame);
+
+      $('.dashboard-right').prepend($container);
+
+      $('.tweetpane').on('load', function() {
+        // Wait a second to ensure the style has been applied. Lazy.
+        setTimeout(function() {
+          $('.tweetpane-cover').hide();
+        }, 1000);
+      });
       return;
     }
   }
