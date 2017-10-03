@@ -146,3 +146,7 @@
 .tweetpane-addon .QuoteTweet-link {
   display: none !important;
 }
+
+.tweetpane-addon .account-group .username {
+  display: inline-block;
+}
